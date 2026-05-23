@@ -15,9 +15,9 @@ export default function Footer() {
       <span
         className="pixel-font"
         style={{
-          fontSize: 13,
+          fontSize: 45,
           color: COLORS.black,
-          letterSpacing: '0.1em',
+          letterSpacing: '0.001em',
         }}
       >
         BRIAN NGUYEN
@@ -67,11 +67,18 @@ export default function Footer() {
             fontSize: 13,
             color: '#666',
             cursor: 'pointer',
-            textDecoration: 'underline',
             textUnderlineOffset: 2,
           }}
         >
-          brianguyen.me
+          <a href='https://brianguyen.me/' 
+            target='_blank' 
+            rel="noopener noreferrer"
+            style={{
+            fontSize: 13,
+            color: COLORS.black,
+            cursor: 'pointer',
+            textDecoration: 'none',
+          }}>brianguyen.me</a>
         </span>
       </div>
     </footer>

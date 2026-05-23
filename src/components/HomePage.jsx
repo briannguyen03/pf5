@@ -16,7 +16,7 @@ export default function HomePage({ setPage }) {
           {/* Hero card */}
           <div
             style={{
-              background: COLORS.bgCard,
+              background: COLORS.grey,
               borderRadius: 6,
               minHeight: 540,
               display: 'flex',
@@ -29,9 +29,9 @@ export default function HomePage({ setPage }) {
             <h1
               className="pixel-font"
               style={{
-                fontSize: 'clamp(28px, 4vw, 48px)',
+                fontSize: 'clamp(50px, 12vw, 70px)',
                 color: COLORS.white,
-                letterSpacing: '0.12em',
+                letterSpacing: '0.001em',
                 lineHeight: 1.1,
               }}
             >
@@ -49,6 +49,9 @@ export default function HomePage({ setPage }) {
                 flex: 1,
                 padding: '16px 20px',
                 minHeight: 250,
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'space-between',
               }}
               onClick={() => setPage('About')}
             >
@@ -66,7 +69,7 @@ export default function HomePage({ setPage }) {
                     letterSpacing: '0.1em',
                   }}
                 >
-                  02 / ABOUT
+                  02 / WHOAMI
                 </span>
                 <span style={{ color: 'rgba(255,255,255,0.7)', fontSize: 18 }}>
                   ↗
@@ -74,10 +77,11 @@ export default function HomePage({ setPage }) {
               </div>
               <div style={{ marginTop: 'auto', paddingTop: 100 }}>
                 <h2
+                  className="pixel-font"
                   style={{
-                    fontSize: 32,
+                    fontSize: 40,
                     fontWeight: 600,
-                    letterSpacing: '0.06em',
+                    letterSpacing: '0.01em',
                     color: COLORS.white,
                   }}
                 >
@@ -94,6 +98,9 @@ export default function HomePage({ setPage }) {
                 flex: 1,
                 padding: '16px 20px',
                 minHeight: 250,
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'space-between',
               }}
               onClick={() => setPage('Projects')}
             >
@@ -111,7 +118,7 @@ export default function HomePage({ setPage }) {
                     letterSpacing: '0.1em',
                   }}
                 >
-                  03 / PROJECTS
+                  03 / MY_EXPERIENCE
                 </span>
                 <span style={{ color: 'rgba(255,255,255,0.5)', fontSize: 18 }}>
                   ↗
@@ -119,10 +126,11 @@ export default function HomePage({ setPage }) {
               </div>
               <div style={{ paddingTop: 100 }}>
                 <h2
+                  className="pixel-font"
                   style={{
-                    fontSize: 32,
+                    fontSize: 40,
                     fontWeight: 600,
-                    letterSpacing: '0.06em',
+                    letterSpacing: '0.01em',
                     color: COLORS.white,
                   }}
                 >
@@ -156,10 +164,11 @@ export default function HomePage({ setPage }) {
             04 / CONTACT
           </div>
           <h2
+            className="pixel-font"
             style={{
-              fontSize: 32,
+              fontSize: 40,
               fontWeight: 600,
-              letterSpacing: '0.06em',
+              letterSpacing: '0.01em',
               color: COLORS.white,
             }}
           >

@@ -30,10 +30,10 @@ export default function ProjectsPage() {
           {/* Large featured project — Game of Life */}
           <div
             style={{
-              border: `1px solid ${COLORS.border}`,
+              border: `2px solid ${COLORS.black}`,
               borderRadius: 4,
               padding: 16,
-              background: COLORS.bg,
+              background: COLORS.bgCard,
             }}
           >
             <div
@@ -44,7 +44,7 @@ export default function ProjectsPage() {
               }}
             >
               <span className="tag">MODULE: SIMULATION_01</span>
-              <span style={{ fontSize: 11, color: COLORS.textMuted }}>
+              <span style={{ fontSize: 11, color: COLORS.textDim }}>
                 [2024.JS]
               </span>
             </div>
@@ -52,7 +52,7 @@ export default function ProjectsPage() {
               style={{
                 background: COLORS.bgCard,
                 borderRadius: 4,
-                height: 360,
+                height: 480,
                 marginBottom: 16,
                 display: 'flex',
                 alignItems: 'center',
@@ -76,7 +76,7 @@ export default function ProjectsPage() {
                 fontWeight: 600,
                 letterSpacing: '0.06em',
                 marginBottom: 8,
-                color: COLORS.white,
+                color: COLORS.textDim,
               }}
             >
               THE GAME OF LIFE
@@ -100,10 +100,10 @@ export default function ProjectsPage() {
             {/* Co-op Portal Scraper */}
             <div
               style={{
-                border: `1px solid ${COLORS.border}`,
+                border: `2px solid ${COLORS.black}`,
                 borderRadius: 4,
                 padding: 16,
-                background: COLORS.bg,
+                background: COLORS.bgCard,
               }}
             >
               <div style={{ marginBottom: 10 }}>
@@ -111,7 +111,7 @@ export default function ProjectsPage() {
               </div>
               <div
                 style={{
-                  background: COLORS.bgCard,
+                  background: COLORS.grey,
                   borderRadius: 4,
                   height: 180,
                   marginBottom: 14,
@@ -137,7 +137,7 @@ export default function ProjectsPage() {
                   fontWeight: 600,
                   letterSpacing: '0.06em',
                   marginBottom: 6,
-                  color: COLORS.white,
+                  color: COLORS.textDim,
                 }}
               >
                 CO-OP PORTAL SCRAPER
@@ -158,10 +158,10 @@ export default function ProjectsPage() {
             {/* Blackjack Agent */}
             <div
               style={{
-                border: `1px solid ${COLORS.border}`,
+                border: `2px solid ${COLORS.black}`,
                 borderRadius: 4,
                 padding: 16,
-                background: COLORS.bg,
+                background: COLORS.bgCard,
               }}
             >
               <div style={{ marginBottom: 10 }}>
@@ -171,7 +171,7 @@ export default function ProjectsPage() {
               </div>
               <div
                 style={{
-                  background: COLORS.bgCard,
+                  background: COLORS.grey,
                   borderRadius: 4,
                   height: 180,
                   marginBottom: 14,
@@ -197,7 +197,7 @@ export default function ProjectsPage() {
                   fontWeight: 600,
                   letterSpacing: '0.06em',
                   marginBottom: 6,
-                  color: COLORS.white,
+                  color: COLORS.textDim,
                 }}
               >
                 BLACKJACK AGENT
@@ -220,7 +220,7 @@ export default function ProjectsPage() {
         {/* Dark feature card — Drawing Using AI */}
         <div
           style={{
-            background: COLORS.bgDark,
+            background: COLORS.black,
             border: `1px solid ${COLORS.border}`,
             borderRadius: 4,
             padding: '28px 32px',
@@ -233,7 +233,7 @@ export default function ProjectsPage() {
                 borderLeft: `3px solid ${COLORS.textMuted}`,
                 paddingLeft: 8,
                 fontSize: 11,
-                color: COLORS.textMuted,
+                color: COLORS.grey,
                 letterSpacing: '0.08em',
               }}
             >
@@ -254,7 +254,7 @@ export default function ProjectsPage() {
           <p
             style={{
               fontSize: 11,
-              color: COLORS.textMuted,
+              color: COLORS.grey,
               lineHeight: 1.8,
               letterSpacing: '0.04em',
               maxWidth: 340,
@@ -360,7 +360,7 @@ export default function ProjectsPage() {
               border: `1px solid ${COLORS.border}`,
               borderRadius: 4,
               padding: '16px 18px',
-              background: COLORS.bg,
+              background: COLORS.bgCard,
             }}
           >
             <div
@@ -385,7 +385,7 @@ export default function ProjectsPage() {
                   style={{
                     fontSize: 28,
                     fontWeight: 600,
-                    color: COLORS.white,
+                    color: COLORS.textDim,
                     letterSpacing: '0.04em',
                   }}
                 >
@@ -394,7 +394,7 @@ export default function ProjectsPage() {
                 <div
                   style={{
                     fontSize: 10,
-                    color: COLORS.textMuted,
+                    color: COLORS.textDim,
                     letterSpacing: '0.06em',
                   }}
                 >
@@ -406,7 +406,7 @@ export default function ProjectsPage() {
                   style={{
                     fontSize: 28,
                     fontWeight: 600,
-                    color: COLORS.white,
+                    color: COLORS.textDim,
                     letterSpacing: '0.04em',
                   }}
                 >

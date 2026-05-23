@@ -39,7 +39,7 @@ export default function AboutPage() {
         <div
           style={{
             fontSize: 11,
-            color: COLORS.textMuted,
+            color: COLORS.white,
             letterSpacing: '0.12em',
             marginBottom: 16,
           }}
@@ -62,41 +62,61 @@ export default function AboutPage() {
               border: `1px solid ${COLORS.border}`,
               borderRadius: 4,
               padding: 20,
-              background: COLORS.bg,
+              background: COLORS.white,
+              display: 'flex',
+              flexDirection: 'row', // Align the left column and right column side-by-side
+              gap: 20, // Clean separation between columns
+              overflow: 'hidden',
             }}
           >
-            <div style={{ display: 'flex', gap: 20, marginBottom: 20 }}>
+            {/* Left Column: Just the photo container */}
+            <div
+              style={{
+                width: 250,
+                height: 350,
+                background: COLORS.bgCard,
+                borderRadius: 3,
+                flexShrink: 0,
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}
+            >
+              <img
+                src="assets/rasta_man.png"
+                alt="Brian Nguyen"
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover',
+                  borderRadius: 3,
+                }}
+              />
+            </div>
+
+            {/* Right Column: Text content, divider line, and button grouped together */}
+            <div
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                flex: 1,
+              }}
+            >
+              {/* Text Section */}
               <div
                 style={{
-                  width: 130,
-                  height: 160,
-                  background: COLORS.bgCard,
-                  borderRadius: 3,
-                  flexShrink: 0,
+                  padding: '0 24px 20px 24px', // Keeps your internal padding structure
                   display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
+                  flexDirection: 'column',
                 }}
               >
-                <img
-                  src="assets/rasta_man.png"
-                  alt="Brian Nguyen"
-                  style={{
-                    width: '100%',
-                    height: '100%',
-                    objectFit: 'cover',
-                    borderRadius: 3,
-                  }}
-                />
-              </div>
-              <div>
                 <h2
                   style={{
                     fontSize: 14,
                     fontWeight: 600,
                     letterSpacing: '0.08em',
                     marginBottom: 14,
-                    color: COLORS.white,
+                    color: COLORS.textDim,
                   }}
                 >
                   ABOUT
@@ -129,47 +149,52 @@ export default function AboutPage() {
                   systematic thinking.
                 </p>
               </div>
-            </div>
-            <hr
-              style={{
-                border: 'none',
-                borderTop: `1px solid ${COLORS.border}`,
-                margin: '0 0 16px',
-              }}
-            />
-            <a
-              href="assets/resume.pdf"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="send-btn"
-              style={{
-                background: COLORS.text,
-                color: COLORS.black,
-                textDecoration: 'none',
-                display: 'inline-flex',
-                alignItems: 'center',
-                gap: 8,
-                padding: '12px 20px',
-                borderRadius: 4,
-                fontFamily: "'IBM Plex Mono', monospace",
-                fontSize: 13,
-                letterSpacing: '0.06em',
-                cursor: 'pointer',
-                transition: 'opacity 0.2s',
-                border: 'none',
-              }}
-            >
-              DOWNLOAD CV &nbsp;↓
-            </a>
-          </div>
 
+              {/* The horizontal rule now stays completely inside the right column */}
+              <hr
+                style={{
+                  border: 'none',
+                  borderTop: `1px solid ${COLORS.border}`,
+                  margin: '0 0 16px 0',
+                }}
+              />
+
+              {/* Button Section */}
+              <div style={{ paddingLeft: 24 }}>
+                <a
+                  href="assets/resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="send-btn"
+                  style={{
+                    background: COLORS.text,
+                    color: COLORS.black,
+                    textDecoration: 'none',
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: 8,
+                    padding: '12px 20px',
+                    borderRadius: 4,
+                    fontFamily: "'IBM Plex Mono', monospace",
+                    fontSize: 13,
+                    letterSpacing: '0.06em',
+                    cursor: 'pointer',
+                    transition: 'opacity 0.2s',
+                    border: 'none',
+                  }}
+                >
+                  DOWNLOAD CV &nbsp;↓
+                </a>
+              </div>
+            </div>
+          </div>
           {/* Fun stuff card */}
           <div
             style={{
               border: `1px solid ${COLORS.border}`,
               borderRadius: 4,
               padding: 20,
-              background: COLORS.bg,
+              background: COLORS.white,
             }}
           >
             <div
@@ -184,7 +209,7 @@ export default function AboutPage() {
                   fontSize: 14,
                   fontWeight: 600,
                   letterSpacing: '0.08em',
-                  color: COLORS.white,
+                  color: COLORS.textDim,
                 }}
               >
                 OUTSIDE THE TERMINAL
@@ -256,7 +281,7 @@ export default function AboutPage() {
               border: `1px solid ${COLORS.border}`,
               borderRadius: 4,
               padding: '28px 32px',
-              background: COLORS.bgDark,
+              background: COLORS.black,
               display: 'flex',
               flexDirection: 'column',
               justifyContent: 'center',
@@ -277,7 +302,7 @@ export default function AboutPage() {
               style={{
                 fontSize: 22,
                 fontStyle: 'italic',
-                color: COLORS.textMuted,
+                color: COLORS.white,
                 marginBottom: 20,
                 lineHeight: 1.4,
               }}
@@ -286,12 +311,12 @@ export default function AboutPage() {
             </div>
             <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
               <div
-                style={{ width: 40, height: 1, background: COLORS.border }}
+                style={{ width: 40, height: 1, background: COLORS.white }}
               />
               <span
                 style={{
                   fontSize: 10,
-                  color: COLORS.textDim,
+                  color: COLORS.white,
                   letterSpacing: '0.08em',
                 }}
               >
@@ -306,7 +331,7 @@ export default function AboutPage() {
               border: `1px solid ${COLORS.border}`,
               borderRadius: 4,
               padding: 20,
-              background: COLORS.bg,
+              background: COLORS.bgCard,
             }}
           >
             <div
@@ -321,7 +346,7 @@ export default function AboutPage() {
                   fontSize: 14,
                   fontWeight: 600,
                   letterSpacing: '0.08em',
-                  color: COLORS.white,
+                  color: COLORS.textDim,
                 }}
               >
                 EDUCATION
@@ -349,7 +374,7 @@ export default function AboutPage() {
                       fontSize: 14,
                       fontWeight: 600,
                       letterSpacing: '0.06em',
-                      color: COLORS.white,
+                      color: COLORS.textDim,
                     }}
                   >
                     {item.title}
@@ -357,7 +382,7 @@ export default function AboutPage() {
                   <div
                     style={{
                       fontSize: 11,
-                      color: COLORS.textMuted,
+                      color: COLORS.textDim,
                       letterSpacing: '0.04em',
                       marginTop: 4,
                     }}
@@ -376,7 +401,7 @@ export default function AboutPage() {
         {/* Extra dark section */}
         <div
           style={{
-            background: COLORS.bgDark,
+            background: COLORS.bgCard,
             border: `1px solid ${COLORS.border}`,
             borderRadius: 4,
             height: 160,
