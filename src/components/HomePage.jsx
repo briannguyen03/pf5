@@ -66,7 +66,7 @@ export default function HomePage({ setPage }) {
                     letterSpacing: '0.1em',
                   }}
                 >
-                  02 / PHILOSOPHY
+                  02 / ABOUT
                 </span>
                 <span style={{ color: 'rgba(255,255,255,0.7)', fontSize: 18 }}>
                   ↗
@@ -111,7 +111,7 @@ export default function HomePage({ setPage }) {
                     letterSpacing: '0.1em',
                   }}
                 >
-                  03 / ARCHIVE
+                  03 / PROJECTS
                 </span>
                 <span style={{ color: 'rgba(255,255,255,0.5)', fontSize: 18 }}>
                   ↗
@@ -153,7 +153,7 @@ export default function HomePage({ setPage }) {
               marginBottom: 8,
             }}
           >
-            04 / DIALOGUE
+            04 / CONTACT
           </div>
           <h2
             style={{

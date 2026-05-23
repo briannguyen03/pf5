@@ -23,20 +23,56 @@ export default function Footer() {
         BRIAN NGUYEN
       </span>
       <div style={{ display: 'flex', gap: 24 }}>
-        {['Instagram', 'LinkedIn', 'Twitter', 'Terms'].map((l, i) => (
-          <span
-            key={l}
-            style={{
-              fontSize: 13,
-              color: i === 3 ? '#666' : COLORS.black,
-              cursor: 'pointer',
-              textDecoration: i === 3 ? 'underline' : 'none',
-              textUnderlineOffset: 2,
-            }}
-          >
-            {l}
-          </span>
-        ))}
+        <a
+          href="https://github.com/briannguyen03"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            fontSize: 13,
+            color: COLORS.black,
+            cursor: 'pointer',
+            textDecoration: 'none',
+          }}
+        >
+          GitHub
+        </a>
+        <a
+          href="https://www.linkedin.com/in/brian-nguyen-19920027a/"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            fontSize: 13,
+            color: COLORS.black,
+            cursor: 'pointer',
+            textDecoration: 'none',
+          }}
+        >
+          LinkedIn
+        </a>
+        <a
+          href="https://letterboxd.com/Iloveowenwilson/"
+          target="_blank"
+          rel="noopener noreferrer"
+          style={{
+            fontSize: 13,
+            color: COLORS.black,
+            cursor: 'pointer',
+            textDecoration: 'none',
+          }}
+        >
+          Letterboxd
+        </a>
+        <span
+          style={{
+            fontSize: 13,
+            color: '#666',
+            cursor: 'pointer',
+            textDecoration: 'underline',
+            textUnderlineOffset: 2,
+          }}
+        >
+          brianguyen.me
+        </span>
       </div>
     </footer>
   );

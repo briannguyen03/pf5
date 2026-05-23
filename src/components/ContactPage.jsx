@@ -3,10 +3,10 @@ import { COLORS } from '../constants/colors';
 import Footer from './Footer';
 
 const SOCIALS = [
-  { n: '01', label: 'INSTAGRAM' },
-  { n: '02', label: 'LINKEDIN' },
-  { n: '03', label: 'TWITTER' },
-  { n: '04', label: 'GITHUB' },
+  { n: '01', label: 'GITHUB', url: 'https://github.com/briannguyen03' },
+  { n: '02', label: 'LINKEDIN', url: 'https://www.linkedin.com/in/brian-nguyen-19920027a/' },
+  { n: '03', label: 'LETTERBOXD', url: 'https://letterboxd.com/Iloveowenwilson/' },
+  { n: '04', label: 'EMAIL', url: 'mailto:nguyen.brian1403@gmail.com' },
 ];
 
 export default function ContactPage() {
@@ -209,11 +209,11 @@ export default function ContactPage() {
                   letterSpacing: '0.04em',
                 }}
               >
-                UNIT 402, CONCRETE PLAZA
+                VICTORIA, BC
                 <br />
-                INDUSTRIAL DISTRICT, SE1
+                CANADA
                 <br />
-                LONDON, UNITED KINGDOM
+                PACIFIC TIME ZONE
               </div>
             </div>
 
@@ -260,7 +260,14 @@ export default function ContactPage() {
                 }}
               >
                 {SOCIALS.map((s) => (
-                  <div key={s.label} className="social-grid-item">
+                  <a
+                    key={s.label}
+                    href={s.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="social-grid-item"
+                    style={{ textDecoration: 'none' }}
+                  >
                     <div
                       style={{
                         fontSize: 9,
@@ -281,7 +288,7 @@ export default function ContactPage() {
                     >
                       {s.label}
                     </div>
-                  </div>
+                  </a>
                 ))}
               </div>
             </div>

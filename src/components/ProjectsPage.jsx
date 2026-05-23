@@ -27,7 +27,7 @@ export default function ProjectsPage() {
             marginBottom: 12,
           }}
         >
-          {/* Large featured project */}
+          {/* Large featured project — Game of Life */}
           <div
             style={{
               border: `1px solid ${COLORS.border}`,
@@ -43,9 +43,9 @@ export default function ProjectsPage() {
                 marginBottom: 12,
               }}
             >
-              <span className="tag">MODULE: STRUCTURAL_01</span>
+              <span className="tag">MODULE: SIMULATION_01</span>
               <span style={{ fontSize: 11, color: COLORS.textMuted }}>
-                [2024.V3]
+                [2024.JS]
               </span>
             </div>
             <div
@@ -57,11 +57,18 @@ export default function ProjectsPage() {
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
+                overflow: 'hidden',
               }}
             >
-              <span style={{ color: COLORS.textDim, fontSize: 12 }}>
-                [ IMAGE ]
-              </span>
+              <img
+                src="assets/game_of_life.png"
+                alt="The Game of Life"
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'contain',
+                }}
+              />
             </div>
             <h3
               style={{
@@ -72,7 +79,7 @@ export default function ProjectsPage() {
                 color: COLORS.white,
               }}
             >
-              LUMINA PAVILION
+              THE GAME OF LIFE
             </h3>
             <p
               style={{
@@ -83,13 +90,14 @@ export default function ProjectsPage() {
                 maxWidth: 420,
               }}
             >
-              EXPLORING THE INTERSECTION OF LIGHT DENSITY AND CONCRETE GEOMETRY
-              IN VIRTUAL SPACES. SYSTEM OPTIMIZED FOR MAXIMAL SHADOW FIDELITY.
+              CONWAY'S CELLULAR AUTOMATON IMPLEMENTED IN P5.JS. REAL-TIME
+              SIMULATION WITH ADJUSTABLE RGB VALUES AND A RANDOMIZE FUNCTION.
             </p>
           </div>
 
           {/* Right: two stacked cards */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
+            {/* Co-op Portal Scraper */}
             <div
               style={{
                 border: `1px solid ${COLORS.border}`,
@@ -99,7 +107,7 @@ export default function ProjectsPage() {
               }}
             >
               <div style={{ marginBottom: 10 }}>
-                <span className="tag">TYPE: ARCHITECTURAL</span>
+                <span className="tag">TYPE: AUTOMATION</span>
               </div>
               <div
                 style={{
@@ -110,11 +118,18 @@ export default function ProjectsPage() {
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
+                  overflow: 'hidden',
                 }}
               >
-                <span style={{ color: COLORS.textDim, fontSize: 12 }}>
-                  [ IMAGE ]
-                </span>
+                <img
+                  src="assets/lim_scraper_demo.png"
+                  alt="Co-op Portal Scraper"
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'contain',
+                  }}
+                />
               </div>
               <h3
                 style={{
@@ -125,7 +140,7 @@ export default function ProjectsPage() {
                   color: COLORS.white,
                 }}
               >
-                HELIX STUDY
+                CO-OP PORTAL SCRAPER
               </h3>
               <p
                 style={{
@@ -135,10 +150,12 @@ export default function ProjectsPage() {
                   letterSpacing: '0.04em',
                 }}
               >
-                RECURSIVE GEOMETRY SEQUENCING FOR HIGH-DENSITY URBAN HABITATS.
+                AUTOMATED UVIC CO-OP JOB SCRAPER WITH SELENIUM AND DEEPSEEK R1
+                SKILL MATCHING.
               </p>
             </div>
 
+            {/* Blackjack Agent */}
             <div
               style={{
                 border: `1px solid ${COLORS.border}`,
@@ -148,11 +165,8 @@ export default function ProjectsPage() {
               }}
             >
               <div style={{ marginBottom: 10 }}>
-                <span
-                  className="tag"
-                  style={{ borderColor: '#5a8a5a', color: '#8ac48a' }}
-                >
-                  STATUS: LIVE
+                <span className="tag" style={{ borderColor: '#5a8a5a', color: '#8ac48a' }}>
+                  STATUS: TRAINED
                 </span>
               </div>
               <div
@@ -164,11 +178,18 @@ export default function ProjectsPage() {
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
+                  overflow: 'hidden',
                 }}
               >
-                <span style={{ color: COLORS.textDim, fontSize: 12 }}>
-                  [ IMAGE ]
-                </span>
+                <img
+                  src="assets/blackjackAgentscreenshot.png"
+                  alt="Blackjack Agent"
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'contain',
+                  }}
+                />
               </div>
               <h3
                 style={{
@@ -179,7 +200,7 @@ export default function ProjectsPage() {
                   color: COLORS.white,
                 }}
               >
-                VOID GALLERY
+                BLACKJACK AGENT
               </h3>
               <p
                 style={{
@@ -189,13 +210,14 @@ export default function ProjectsPage() {
                   letterSpacing: '0.04em',
                 }}
               >
-                MINIMALIST EXHIBITION LOGIC FOR NON-PHYSICAL ASSETS.
+                RL AGENT USING Q-LEARNING WITH EPSILON DECAY, REACHING ~41%
+                WIN RATE OVER 10,000 HANDS.
               </p>
             </div>
           </div>
         </div>
 
-        {/* Dark feature card */}
+        {/* Dark feature card — Drawing Using AI */}
         <div
           style={{
             background: COLORS.bgDark,
@@ -215,7 +237,7 @@ export default function ProjectsPage() {
                 letterSpacing: '0.08em',
               }}
             >
-              DATA_ENTRY: CRITICAL
+              DATA_ENTRY: COMPUTER_VISION
             </span>
           </div>
           <h3
@@ -227,7 +249,7 @@ export default function ProjectsPage() {
               color: COLORS.white,
             }}
           >
-            KINETIC TOWER
+            DRAWING USING AI
           </h3>
           <p
             style={{
@@ -238,8 +260,9 @@ export default function ProjectsPage() {
               maxWidth: 340,
             }}
           >
-            A RECONFIGURABLE HIGH-RISE SYSTEM THAT RESPONDS TO ATMOSPHERIC DATA
-            IN REAL-TIME. PARAMETRIC CORE INTEGRATION SUCCESSFUL.
+            A HAND-TRACKING DRAWING APPLICATION USING COMPUTER VISION.
+            TRANSLATES FINGER MOVEMENTS TO PAINT ON A LIVE WEBCAM CANVAS WITH
+            VARIABLE BRUSH SIZE AND PINCH-TO-DRAW CONTROLS.
           </p>
         </div>
 
@@ -252,13 +275,18 @@ export default function ProjectsPage() {
             marginBottom: 40,
           }}
         >
-          {/* Fractal lab */}
-          <div
+          {/* GitHub link card — repurposed from Fractal Lab */}
+          <a
+            href="https://github.com/briannguyen03"
+            target="_blank"
+            rel="noopener noreferrer"
             style={{
               border: '1px solid #6b5a2a',
               borderRadius: 4,
               padding: '16px 18px',
               background: '#1a1508',
+              textDecoration: 'none',
+              display: 'block',
             }}
           >
             <div
@@ -273,7 +301,7 @@ export default function ProjectsPage() {
                 className="tag"
                 style={{ borderColor: '#6b5a2a', color: '#c4a84a' }}
               >
-                MODULE: FRACTAL
+                MODULE: ARCHIVE
               </span>
               <span style={{ fontSize: 18, color: '#c4a84a' }}>⊞</span>
             </div>
@@ -286,7 +314,7 @@ export default function ProjectsPage() {
                 color: '#e8d08a',
               }}
             >
-              FRACTAL LAB
+              MORE ON GITHUB
             </h3>
             <p
               style={{
@@ -297,8 +325,8 @@ export default function ProjectsPage() {
                 marginBottom: 20,
               }}
             >
-              GENERATIVE SPACE ALLOCATION ALGORITHMS FOR LABORATORY
-              INFRASTRUCTURE.
+              ALL PROJECTS ARE OPEN SOURCE. EXPLORE THE FULL REPOSITORY
+              ARCHIVE INCLUDING THE HAND POSE MODEL AND LIM SCRAPER PIPELINE.
             </p>
             <hr
               style={{ border: 'none', borderTop: '1px solid #6b5a2a', margin: '12px 0' }}
@@ -311,7 +339,7 @@ export default function ProjectsPage() {
                   letterSpacing: '0.06em',
                 }}
               >
-                VERSION: 0.6.1
+                VERSION: 4.0
               </span>
               <span
                 style={{
@@ -321,12 +349,12 @@ export default function ProjectsPage() {
                   cursor: 'pointer',
                 }}
               >
-                DETAILS_LOG →→
+                BROWSE_ALL →→
               </span>
             </div>
-          </div>
+          </a>
 
-          {/* Stats */}
+          {/* Stats panel — real metrics */}
           <div
             style={{
               border: `1px solid ${COLORS.border}`,
@@ -361,7 +389,7 @@ export default function ProjectsPage() {
                     letterSpacing: '0.04em',
                   }}
                 >
-                  1,204
+                  4
                 </div>
                 <div
                   style={{
@@ -370,7 +398,7 @@ export default function ProjectsPage() {
                     letterSpacing: '0.06em',
                   }}
                 >
-                  GEOMETRIC_NODES
+                  SHIPPED_PROJECTS
                 </div>
               </div>
               <div style={{ flex: 1, paddingLeft: 20 }}>
@@ -382,7 +410,7 @@ export default function ProjectsPage() {
                     letterSpacing: '0.04em',
                   }}
                 >
-                  98.2%
+                  10K+
                 </div>
                 <div
                   style={{
@@ -391,7 +419,7 @@ export default function ProjectsPage() {
                     letterSpacing: '0.06em',
                   }}
                 >
-                  STRUCTURAL_SYMMETRY
+                  SIMULATED_HANDS
                 </div>
               </div>
             </div>
@@ -410,8 +438,9 @@ export default function ProjectsPage() {
                 letterSpacing: '0.04em',
               }}
             >
-              ALL PROJECTS ARE VALIDATED THROUGH A RIGID 4PX GRID FRAMEWORK TO
-              ENSURE PIXEL-PERFECTION IN PHYSICAL AND DIGITAL REALMS.
+              EVERY PROJECT IS BUILT WITH CLEAN ARCHITECTURE, SYSTEMATIC
+              TESTING, AND A FOCUS ON REAL-WORLD UTILITY OVER THEORETICAL
+              PERFECTION.
             </p>
           </div>
         </div>

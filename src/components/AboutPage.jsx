@@ -3,26 +3,21 @@ import Footer from './Footer';
 
 const FUN_STUFF = [
   {
-    num: '01. STRUCTURAL HONESTY',
-    quote: '"Complexity must not hide its skeleton."',
+    num: '01. OUTSIDE THE TERMINAL',
+    quote: '"When I\'m not coding, you\'ll find me biking Victoria\'s trails or hitting the basketball court."',
   },
   {
-    num: '02. DATA AS DUST',
-    quote:
-      '"Binary information is as granular and tactile as charcoal."',
+    num: '02. FILM BUFF',
+    quote: '"A good film is like clean architecture — every frame serves a purpose."',
   },
   {
-    num: '03. MACHINE EMPATHY',
-    quote:
-      '"Searching for the accidental errors that make systems feel alive."',
+    num: '03. HOMELAB ASPIRATIONS',
+    quote: '"Recently diving into the hardware side of tech. A homelab is in the works."',
   },
 ];
 
 const EDUCATION = [
-  { year: '2023 / ITALY', title: 'VENICE BIENNALE', arrow: '↗' },
-  { year: '2021 / USA', title: 'MOMA RESIDENCY', arrow: '→' },
-  { year: '2018 / UK', title: 'ROYAL ACADEMY', arrow: '↗' },
-  { year: '2016 / CAN', title: 'NATIONAL GALLERY', arrow: '↗' },
+  { year: '2023 / CAN', title: 'UNIVERSITY OF VICTORIA', subtitle: 'B.SE Software Engineering', arrow: '↗' },
 ];
 
 export default function AboutPage() {
@@ -83,9 +78,16 @@ export default function AboutPage() {
                   justifyContent: 'center',
                 }}
               >
-                <span style={{ color: COLORS.textDim, fontSize: 11 }}>
-                  PHOTO
-                </span>
+                <img
+                  src="assets/rasta_man.png"
+                  alt="Brian Nguyen"
+                  style={{
+                    width: '100%',
+                    height: '100%',
+                    objectFit: 'cover',
+                    borderRadius: 3,
+                  }}
+                />
               </div>
               <div>
                 <h2
@@ -107,10 +109,11 @@ export default function AboutPage() {
                     marginBottom: 12,
                   }}
                 >
-                  Brian Nguyen is a software engineer whose work explores the
-                  intersection of functional systems and thoughtful design. Based
-                  in Vancouver, his practice spans web development, generative
-                  interfaces, and data-driven visual systems.
+                  Brian Nguyen is a software engineering student in his third
+                  year at the University of Victoria. His core languages are
+                  Python, C, JavaScript, and Java — building everything from
+                  interactive web applications to machine learning models and
+                  low-level software.
                 </p>
                 <p
                   style={{
@@ -119,10 +122,11 @@ export default function AboutPage() {
                     lineHeight: 1.8,
                   }}
                 >
-                  By treating code as a creative medium, Brian builds
-                  environments that challenge the boundary between utility and
-                  expression. His work is defined by precision, systematic
-                  thinking, and structural honesty.
+                  He treats code as a creative medium, building projects that
+                  challenge the boundary between utility and expression. His
+                  work spans web development, reinforcement learning, computer
+                  vision, and automated pipelines — defined by precision and
+                  systematic thinking.
                 </p>
               </div>
             </div>
@@ -133,12 +137,30 @@ export default function AboutPage() {
                 margin: '0 0 16px',
               }}
             />
-            <button
+            <a
+              href="assets/resume.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
               className="send-btn"
-              style={{ background: COLORS.text, color: COLORS.black }}
+              style={{
+                background: COLORS.text,
+                color: COLORS.black,
+                textDecoration: 'none',
+                display: 'inline-flex',
+                alignItems: 'center',
+                gap: 8,
+                padding: '12px 20px',
+                borderRadius: 4,
+                fontFamily: "'IBM Plex Mono', monospace",
+                fontSize: 13,
+                letterSpacing: '0.06em',
+                cursor: 'pointer',
+                transition: 'opacity 0.2s',
+                border: 'none',
+              }}
             >
               DOWNLOAD CV &nbsp;↓
-            </button>
+            </a>
           </div>
 
           {/* Fun stuff card */}
@@ -165,7 +187,7 @@ export default function AboutPage() {
                   color: COLORS.white,
                 }}
               >
-                FUN STUFF
+                OUTSIDE THE TERMINAL
               </h2>
               <span style={{ fontSize: 16, color: COLORS.textMuted }}>
                 ⁘⁘⁘
@@ -213,7 +235,7 @@ export default function AboutPage() {
                   letterSpacing: '0.08em',
                 }}
               >
-                SYSTEM_STATUS: ACTIVE_
+                SYSTEM_STATUS: BUILDING_
               </span>
             </div>
           </div>
@@ -260,7 +282,7 @@ export default function AboutPage() {
                 lineHeight: 1.4,
               }}
             >
-              &ldquo;A QUOTE&rdquo;
+              &ldquo;Do. Or do not. There is no try.&rdquo;
             </div>
             <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
               <div
@@ -273,7 +295,7 @@ export default function AboutPage() {
                   letterSpacing: '0.08em',
                 }}
               >
-                ARTIST STATEMENT 2024
+                YODA — THE EMPIRE STRIKES BACK
               </span>
             </div>
           </div>
@@ -305,7 +327,7 @@ export default function AboutPage() {
                 EDUCATION
               </h2>
               <span className="tag" style={{ fontSize: 9 }}>
-                ARCHIVE.LOG
+                ACADEMIC.LOG
               </span>
             </div>
 
@@ -331,6 +353,16 @@ export default function AboutPage() {
                     }}
                   >
                     {item.title}
+                  </div>
+                  <div
+                    style={{
+                      fontSize: 11,
+                      color: COLORS.textMuted,
+                      letterSpacing: '0.04em',
+                      marginTop: 4,
+                    }}
+                  >
+                    {item.subtitle}
                   </div>
                 </div>
                 <span style={{ color: COLORS.textMuted, fontSize: 18 }}>
