@@ -29,16 +29,19 @@ export default function ContactPage() {
     <div style={{ background: COLORS.bgDark, minHeight: '100vh' }}>
       <div style={{ padding: '0 40px' }}>
         <h1
+          className="pixel-font"
           style={{
-            fontSize: 22,
-            fontWeight: 400,
+            fontSize: 28,
             color: COLORS.white,
+            letterSpacing: '0.001em',
             paddingTop: 4,
-            marginBottom: 20,
+            marginBottom: 4,
           }}
         >
           Contact Me
         </h1>
+
+        <hr className="section-rule" style={{ marginBottom: 24 }} />
 
         <div
           style={{
@@ -166,7 +169,7 @@ export default function ContactPage() {
                 border: `1px solid ${COLORS.border}`,
                 borderRadius: 4,
                 padding: 16,
-                background: COLORS.bg,
+                background: COLORS.bgCard,
               }}
             >
               <div

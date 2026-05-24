@@ -6,15 +6,16 @@ export default function ProjectsPage() {
     <div style={{ background: COLORS.bgDark, minHeight: '100vh' }}>
       <div style={{ padding: '0 40px' }}>
         <h1
+          className="pixel-font"
           style={{
-            fontSize: 22,
-            fontWeight: 600,
-            letterSpacing: '0.04em',
-            paddingTop: 8,
+            fontSize: 28,
             color: COLORS.white,
+            letterSpacing: '0.001em',
+            paddingTop: 4,
+            marginBottom: 4,
           }}
         >
-          SELECTED_WORKS.TXT
+          PROJECTS
         </h1>
         <hr className="section-rule" style={{ marginBottom: 24 }} />
 
@@ -410,7 +411,7 @@ export default function ProjectsPage() {
                     letterSpacing: '0.04em',
                   }}
                 >
-                  10K+
+                  500M+
                 </div>
                 <div
                   style={{
@@ -419,7 +420,7 @@ export default function ProjectsPage() {
                     letterSpacing: '0.06em',
                   }}
                 >
-                  SIMULATED_HANDS
+                  Tokens Used
                 </div>
               </div>
             </div>

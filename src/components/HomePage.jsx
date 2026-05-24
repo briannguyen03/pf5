@@ -1,5 +1,6 @@
 import { COLORS } from '../constants/colors';
 import Footer from './Footer';
+import { TiltCard } from './TiltCard';
 
 export default function HomePage({ setPage }) {
   return (
@@ -26,6 +27,40 @@ export default function HomePage({ setPage }) {
               overflow: 'hidden',
             }}
           >
+            {/* Background Video Element */}
+            <video
+              autoPlay
+              loop
+              muted
+              playsInline
+              style={{
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                width: '100%',
+                height: '100%',
+                objectFit: 'cover',
+                zIndex: 0,
+                pointerEvents: 'none',
+                filter: 'grayscale(100%) brightness(0.5)',
+              }}
+            >
+              <source src="assets/hero_vid.mp4" type="video/mp4" />
+              Your browser does not support the video tag.
+            </video>
+
+            <div 
+              style={{
+                position: 'absolute',
+                top: 0,
+                left: 0,
+                right: 0,
+                bottom: 0,
+                background: 'linear-gradient(rgba(0,0,0,0.1), rgba(0,0,0,0.5))',
+                zIndex: 1,
+              }}
+            />
+
             <h1
               className="pixel-font"
               style={{
@@ -33,6 +68,8 @@ export default function HomePage({ setPage }) {
                 color: COLORS.white,
                 letterSpacing: '0.001em',
                 lineHeight: 1.1,
+                position: 'relative',
+                zIndex: 2,
               }}
             >
               BRIAN<br />NGUYEN
@@ -42,8 +79,9 @@ export default function HomePage({ setPage }) {
           {/* Right column */}
           <div style={{ display: 'flex', flexDirection: 'column', gap: 12 }}>
             {/* About card */}
-            <div
+            <TiltCard
               className="card"
+              onClick={() => setPage('About')}
               style={{
                 background: COLORS.bgAbout,
                 flex: 1,
@@ -52,8 +90,10 @@ export default function HomePage({ setPage }) {
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'space-between',
+                cursor: 'pointer',
+                border: `1px solid ${COLORS.border || 'transparent'}`,
+                borderRadius: 4,
               }}
-              onClick={() => setPage('About')}
             >
               <div
                 style={{
@@ -88,11 +128,12 @@ export default function HomePage({ setPage }) {
                   ABOUT
                 </h2>
               </div>
-            </div>
+            </TiltCard>
 
             {/* Projects card */}
-            <div
+            <TiltCard
               className="card"
+              onClick={() => setPage('Projects')}
               style={{
                 background: COLORS.bgProjects,
                 flex: 1,
@@ -101,8 +142,10 @@ export default function HomePage({ setPage }) {
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'space-between',
+                cursor: 'pointer',
+                border: `1px solid ${COLORS.border || 'transparent'}`,
+                borderRadius: 4,
               }}
-              onClick={() => setPage('Projects')}
             >
               <div
                 style={{
@@ -137,22 +180,28 @@ export default function HomePage({ setPage }) {
                   PROJECTS
                 </h2>
               </div>
-            </div>
+             </TiltCard>
           </div>
         </div>
+        
 
         {/* Contact bar */}
-        <div
-          className="card"
-          style={{
-            background: COLORS.bgContact,
-            borderRadius: 6,
-            padding: '24px 32px',
-            cursor: 'pointer',
-            marginBottom: 0,
-          }}
-          onClick={() => setPage('Contact')}
-        >
+        <TiltCard
+              className="card"
+              onClick={() => setPage('Contact')}
+              style={{
+                background: COLORS.bgContact,
+                flex: 1,
+                padding: '16px 20px',
+                minHeight: 180,
+                display: 'flex',
+                flexDirection: 'column',
+                justifyContent: 'space-between',
+                cursor: 'pointer',
+                border: `1px solid ${COLORS.border || 'transparent'}`,
+                borderRadius: 4,
+              }}
+            >
           <div
             style={{
               fontSize: 11,
@@ -174,7 +223,7 @@ export default function HomePage({ setPage }) {
           >
             CONTACT
           </h2>
-        </div>
+        </TiltCard>
       </div>
 
       <div style={{ height: 80 }} />
