@@ -15,7 +15,7 @@ export default function ProjectsPage() {
             marginBottom: 4,
           }}
         >
-          PROJECTS
+          Projects
         </h1>
         <hr className="section-rule" style={{ marginBottom: 24 }} />
 
@@ -44,7 +44,7 @@ export default function ProjectsPage() {
                 marginBottom: 12,
               }}
             >
-              <span className="tag">MODULE: SIMULATION_01</span>
+              <span className="tag">SIMULATION</span>
               <span style={{ fontSize: 11, color: COLORS.textDim }}>
                 [2024.JS]
               </span>
@@ -108,7 +108,7 @@ export default function ProjectsPage() {
               }}
             >
               <div style={{ marginBottom: 10 }}>
-                <span className="tag">TYPE: AUTOMATION</span>
+                <span className="tag">AUTOMATION</span>
               </div>
               <div
                 style={{
@@ -127,7 +127,7 @@ export default function ProjectsPage() {
                   alt="Co-op Portal Scraper"
                   style={{
                     width: '100%',
-                    height: '100%',
+                    height: 'auto',
                     objectFit: 'contain',
                   }}
                 />
@@ -151,8 +151,7 @@ export default function ProjectsPage() {
                   letterSpacing: '0.04em',
                 }}
               >
-                AUTOMATED UVIC CO-OP JOB SCRAPER WITH SELENIUM AND DEEPSEEK R1
-                SKILL MATCHING.
+                Built a Python pipeline that automates the job search process. The system uses Selenium and BeautifulSoup to scrape live listings from co-op portal, handling session authentication to bypass manual logins. Extracted roles are then processed by Deepseek's R1 model that analyzes job descriptions against a user’s specific skillset to provide compatibility scores.
               </p>
             </div>
 
@@ -166,9 +165,7 @@ export default function ProjectsPage() {
               }}
             >
               <div style={{ marginBottom: 10 }}>
-                <span className="tag" style={{ borderColor: '#5a8a5a', color: '#8ac48a' }}>
-                  STATUS: TRAINED
-                </span>
+              <span className="tag">MACHINE LEARNING</span>
               </div>
               <div
                 style={{
@@ -187,7 +184,7 @@ export default function ProjectsPage() {
                   alt="Blackjack Agent"
                   style={{
                     width: '100%',
-                    height: '100%',
+                    height: 'auto',
                     objectFit: 'contain',
                   }}
                 />
@@ -211,8 +208,7 @@ export default function ProjectsPage() {
                   letterSpacing: '0.04em',
                 }}
               >
-                RL AGENT USING Q-LEARNING WITH EPSILON DECAY, REACHING ~41%
-                WIN RATE OVER 10,000 HANDS.
+               An RL-based agent trained to play Blackjack using Q-Learning and epsilon decay. After simulating 10,000 hands, the model reached a ~41% win rate, approximating the optimal basic strategy through a simple model.
               </p>
             </div>
           </div>
@@ -238,7 +234,7 @@ export default function ProjectsPage() {
                 letterSpacing: '0.08em',
               }}
             >
-              DATA_ENTRY: COMPUTER_VISION
+              COMPUTER_VISION
             </span>
           </div>
           <h3
@@ -372,7 +368,7 @@ export default function ProjectsPage() {
                 marginBottom: 16,
               }}
             >
-              QUERY_METRICS.LOG
+              STATS
             </div>
             <div style={{ display: 'flex', gap: 0, marginBottom: 16 }}>
               <div

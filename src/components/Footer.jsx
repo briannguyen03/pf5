@@ -20,7 +20,7 @@ export default function Footer() {
           letterSpacing: '0.001em',
         }}
       >
-        BRIAN NGUYEN
+        B.NGUYEN
       </span>
       <div style={{ display: 'flex', gap: 24 }}>
         <a

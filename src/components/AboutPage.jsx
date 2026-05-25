@@ -3,21 +3,32 @@ import Footer from './Footer';
 
 const FUN_STUFF = [
   {
-    num: '01. OUTSIDE THE TERMINAL',
-    quote: '"When I\'m not coding, you\'ll find me biking Victoria\'s trails or hitting the basketball court."',
+    num: '01. Outdoors',
+    quote: 'When I\'m not coding, you\'ll find me biking Victoria\'s trails or hitting the basketball court.',
   },
   {
-    num: '02. FILM BUFF',
-    quote: '"A good film is like clean architecture — every frame serves a purpose."',
+    num: '02. Films',
+    quote: 'I enjoy watching a variety of films, and I am a big fan of anything Quentin Tarantino. Follow me on Letterboxd!',
   },
   {
-    num: '03. HOMELAB ASPIRATIONS',
-    quote: '"Recently diving into the hardware side of tech. A homelab is in the works."',
+    num: '03. Aviation',
+    quote: 'I realy like anything that flies, especially ones with wings.',
+  },
+  {
+    num: '04. Hardware',
+    quote: 'The hardware side of tech gets me excited. I enjoy seeing, and building cool hardware projects',
   },
 ];
 
 const EDUCATION = [
   { year: '2023 / CAN', title: 'UNIVERSITY OF VICTORIA', subtitle: 'B.SE Software Engineering', arrow: '↗' },
+];
+
+const USER_STATS = [
+  { label: 'Experience', value: '2+ Years', sub: 'Backend & ML' },
+  { label: 'Tech Stack', value: 'Python / React / JS', sub: 'Backend & Frontend' },
+  { label: 'Frameworks & Libraries', value: 'FastAPI / Express / Django', sub: 'Databases: MySQL & Postgres' },
+  { label: 'Others', value: 'C / C++ / Java', sub: 'Low level & OOP proficient ' },
 ];
 
 export default function AboutPage() {
@@ -123,30 +134,16 @@ export default function AboutPage() {
                 </h2>
                 <p
                   style={{
-                    fontSize: 12,
+                    fontSize: 14,
                     color: COLORS.textMuted,
                     lineHeight: 1.8,
                     marginBottom: 12,
                   }}
                 >
-                  Brian Nguyen is a software engineering student in his third
-                  year at the University of Victoria. His core languages are
-                  Python, C, JavaScript, and Java — building everything from
-                  interactive web applications to machine learning models and
-                  low-level software.
-                </p>
-                <p
-                  style={{
-                    fontSize: 12,
-                    color: COLORS.textMuted,
-                    lineHeight: 1.8,
-                  }}
-                >
-                  He treats code as a creative medium, building projects that
-                  challenge the boundary between utility and expression. His
-                  work spans web development, reinforcement learning, computer
-                  vision, and automated pipelines — defined by precision and
-                  systematic thinking.
+                  I'm a software engineering student in my third year at the University of Victoria.
+                  My core programming languages include Python, C, JavaScript, and Java. I enjoy building everything from web applications, machine learning projects, and hardware.
+                  When I'm not at my desk, you'll find me out on my bike exploring Victoria's trails or hitting the basketball court. So, if you're looking for a plus-one for your ball team or someone to bike with, hit me up!
+                  I think I've built some pretty cool things - check them out on my projects page!
                 </p>
               </div>
 
@@ -183,7 +180,7 @@ export default function AboutPage() {
                     border: 'none',
                   }}
                 >
-                  DOWNLOAD CV &nbsp;↓
+                  My Resume &nbsp;↗
                 </a>
               </div>
             </div>
@@ -231,7 +228,7 @@ export default function AboutPage() {
               >
                 <div
                   style={{
-                    fontSize: 9,
+                    fontSize: 11,
                     color: COLORS.textDim,
                     letterSpacing: '0.08em',
                     marginBottom: 6,
@@ -251,19 +248,36 @@ export default function AboutPage() {
                 </p>
               </div>
             ))}
-
-            <div style={{ marginTop: 16, textAlign: 'right' }}>
-              <span
-                style={{
-                  fontSize: 10,
-                  color: COLORS.textDim,
-                  letterSpacing: '0.08em',
-                }}
-              >
-                SYSTEM_STATUS: BUILDING_
-              </span>
-            </div>
           </div>
+        </div>
+
+         {/*Stats dashboard*/}
+         <div
+          style={{
+            background: COLORS.bgCard,
+            border: `1px solid ${COLORS.border}`,
+            borderRadius: 4,
+            height: 160,
+            marginBottom: 20,
+            display: 'grid',
+            gridTemplateColumns: 'repeat(4, 1fr)',
+            alignItems: 'center',
+            textAlign: 'center'
+          }}
+        >
+          {USER_STATS.map((stat, i) => (
+            <div key={i} style={{ borderRight: i !== USER_STATS.length - 1 ? `1px solid ${COLORS.border}` : 'none' }}>
+              <div style={{ fontSize: 12, textTransform: 'uppercase', color: COLORS.textDim, letterSpacing: '1px', marginBottom: 8 }}>
+                {stat.label}
+              </div>
+              <div style={{ fontSize: 20, fontWeight: 'bold', color: COLORS.textMuted, marginBottom: 4 }}>
+                {stat.value}
+              </div>
+              <div style={{ fontSize: 11, color: COLORS.textMuted, fontStyle: 'italic' }}>
+                {stat.sub}
+              </div>
+            </div>
+          ))}
         </div>
 
         {/* Quote + Education row */}
@@ -272,7 +286,7 @@ export default function AboutPage() {
             display: 'grid',
             gridTemplateColumns: '1fr 1.2fr',
             gap: 12,
-            marginBottom: 40,
+            marginBottom: 50,
           }}
         >
           {/* Quote panel */}
@@ -397,17 +411,6 @@ export default function AboutPage() {
             ))}
           </div>
         </div>
-
-        {/* Extra dark section */}
-        <div
-          style={{
-            background: COLORS.bgCard,
-            border: `1px solid ${COLORS.border}`,
-            borderRadius: 4,
-            height: 160,
-            marginBottom: 40,
-          }}
-        />
       </div>
       <Footer />
     </div>
