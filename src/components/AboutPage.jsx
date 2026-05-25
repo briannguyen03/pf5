@@ -3,26 +3,32 @@ import Footer from './Footer';
 
 const FUN_STUFF = [
   {
-    num: '01. STRUCTURAL HONESTY',
-    quote: '"Complexity must not hide its skeleton."',
+    num: '01. Outdoors',
+    quote: 'When I\'m not coding, you\'ll find me biking Victoria\'s trails or hitting the basketball court.',
   },
   {
-    num: '02. DATA AS DUST',
-    quote:
-      '"Binary information is as granular and tactile as charcoal."',
+    num: '02. Films',
+    quote: 'I enjoy watching a variety of films, and I am a big fan of anything Quentin Tarantino. Follow me on Letterboxd!',
   },
   {
-    num: '03. MACHINE EMPATHY',
-    quote:
-      '"Searching for the accidental errors that make systems feel alive."',
+    num: '03. Aviation',
+    quote: 'I realy like anything that flies, especially ones with wings.',
+  },
+  {
+    num: '04. Hardware',
+    quote: 'The hardware side of tech gets me excited. I enjoy seeing, and building cool hardware projects',
   },
 ];
 
 const EDUCATION = [
-  { year: '2023 / ITALY', title: 'VENICE BIENNALE', arrow: '↗' },
-  { year: '2021 / USA', title: 'MOMA RESIDENCY', arrow: '→' },
-  { year: '2018 / UK', title: 'ROYAL ACADEMY', arrow: '↗' },
-  { year: '2016 / CAN', title: 'NATIONAL GALLERY', arrow: '↗' },
+  { year: '2023 / CAN', title: 'UNIVERSITY OF VICTORIA', subtitle: 'B.SE Software Engineering', arrow: '↗' },
+];
+
+const USER_STATS = [
+  { label: 'Experience', value: '2+ Years', sub: 'Backend & ML' },
+  { label: 'Tech Stack', value: 'Python / React / JS', sub: 'Backend & Frontend' },
+  { label: 'Frameworks & Libraries', value: 'FastAPI / Express / Django', sub: 'Databases: MySQL & Postgres' },
+  { label: 'Others', value: 'C / C++ / Java', sub: 'Low level & OOP proficient ' },
 ];
 
 export default function AboutPage() {
@@ -44,7 +50,7 @@ export default function AboutPage() {
         <div
           style={{
             fontSize: 11,
-            color: COLORS.textMuted,
+            color: COLORS.white,
             letterSpacing: '0.12em',
             marginBottom: 16,
           }}
@@ -67,87 +73,125 @@ export default function AboutPage() {
               border: `1px solid ${COLORS.border}`,
               borderRadius: 4,
               padding: 20,
-              background: COLORS.bg,
+              background: COLORS.white,
+              display: 'flex',
+              flexDirection: 'row', // Align the left column and right column side-by-side
+              gap: 20, // Clean separation between columns
+              overflow: 'hidden',
             }}
           >
-            <div style={{ display: 'flex', gap: 20, marginBottom: 20 }}>
+            {/* Left Column: Just the photo container */}
+            <div
+              style={{
+                width: 250,
+                height: 350,
+                background: COLORS.bgCard,
+                borderRadius: 3,
+                flexShrink: 0,
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}
+            >
+              <img
+                src="assets/rasta_man.png"
+                alt="Brian Nguyen"
+                style={{
+                  width: '100%',
+                  height: '100%',
+                  objectFit: 'cover',
+                  borderRadius: 3,
+                }}
+              />
+            </div>
+
+            {/* Right Column: Text content, divider line, and button grouped together */}
+            <div
+              style={{
+                display: 'flex',
+                flexDirection: 'column',
+                flex: 1,
+              }}
+            >
+              {/* Text Section */}
               <div
                 style={{
-                  width: 130,
-                  height: 160,
-                  background: COLORS.bgCard,
-                  borderRadius: 3,
-                  flexShrink: 0,
+                  padding: '0 24px 20px 24px', // Keeps your internal padding structure
                   display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
+                  flexDirection: 'column',
                 }}
               >
-                <span style={{ color: COLORS.textDim, fontSize: 11 }}>
-                  PHOTO
-                </span>
-              </div>
-              <div>
                 <h2
                   style={{
                     fontSize: 14,
                     fontWeight: 600,
                     letterSpacing: '0.08em',
                     marginBottom: 14,
-                    color: COLORS.white,
+                    color: COLORS.textDim,
                   }}
                 >
                   ABOUT
                 </h2>
                 <p
                   style={{
-                    fontSize: 12,
+                    fontSize: 14,
                     color: COLORS.textMuted,
                     lineHeight: 1.8,
                     marginBottom: 12,
                   }}
                 >
-                  Brian Nguyen is a software engineer whose work explores the
-                  intersection of functional systems and thoughtful design. Based
-                  in Vancouver, his practice spans web development, generative
-                  interfaces, and data-driven visual systems.
-                </p>
-                <p
-                  style={{
-                    fontSize: 12,
-                    color: COLORS.textMuted,
-                    lineHeight: 1.8,
-                  }}
-                >
-                  By treating code as a creative medium, Brian builds
-                  environments that challenge the boundary between utility and
-                  expression. His work is defined by precision, systematic
-                  thinking, and structural honesty.
+                  I'm a software engineering student in my third year at the University of Victoria.
+                  My core programming languages include Python, C, JavaScript, and Java. I enjoy building everything from web applications, machine learning projects, and hardware.
+                  When I'm not at my desk, you'll find me out on my bike exploring Victoria's trails or hitting the basketball court. So, if you're looking for a plus-one for your ball team or someone to bike with, hit me up!
+                  I think I've built some pretty cool things - check them out on my projects page!
                 </p>
               </div>
-            </div>
-            <hr
-              style={{
-                border: 'none',
-                borderTop: `1px solid ${COLORS.border}`,
-                margin: '0 0 16px',
-              }}
-            />
-            <button
-              className="send-btn"
-              style={{ background: COLORS.text, color: COLORS.black }}
-            >
-              DOWNLOAD CV &nbsp;↓
-            </button>
-          </div>
 
+              {/* The horizontal rule now stays completely inside the right column */}
+              <hr
+                style={{
+                  border: 'none',
+                  borderTop: `1px solid ${COLORS.border}`,
+                  margin: '0 0 16px 0',
+                }}
+              />
+
+              {/* Button Section */}
+              <div style={{ paddingLeft: 24 }}>
+                <a
+                  href="assets/resume.pdf"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="send-btn"
+                  style={{
+                    background: COLORS.text,
+                    color: COLORS.black,
+                    textDecoration: 'none',
+                    display: 'inline-flex',
+                    alignItems: 'center',
+                    gap: 8,
+                    padding: '12px 20px',
+                    borderRadius: 4,
+                    fontFamily: "'IBM Plex Mono', monospace",
+                    fontSize: 13,
+                    letterSpacing: '0.06em',
+                    cursor: 'pointer',
+                    transition: 'opacity 0.2s',
+                    border: 'none',
+                  }}
+                >
+                  My Resume &nbsp;↗
+                </a>
+              </div>
+            </div>
+          </div>
           {/* Fun stuff card */}
           <div
             style={{
               border: `1px solid ${COLORS.border}`,
               borderRadius: 4,
               padding: 20,
-              background: COLORS.bg,
+              background: COLORS.white,
             }}
           >
             <div
@@ -162,10 +206,10 @@ export default function AboutPage() {
                   fontSize: 14,
                   fontWeight: 600,
                   letterSpacing: '0.08em',
-                  color: COLORS.white,
+                  color: COLORS.textDim,
                 }}
               >
-                FUN STUFF
+                OUTSIDE THE TERMINAL
               </h2>
               <span style={{ fontSize: 16, color: COLORS.textMuted }}>
                 ⁘⁘⁘
@@ -184,7 +228,7 @@ export default function AboutPage() {
               >
                 <div
                   style={{
-                    fontSize: 9,
+                    fontSize: 11,
                     color: COLORS.textDim,
                     letterSpacing: '0.08em',
                     marginBottom: 6,
@@ -204,19 +248,36 @@ export default function AboutPage() {
                 </p>
               </div>
             ))}
-
-            <div style={{ marginTop: 16, textAlign: 'right' }}>
-              <span
-                style={{
-                  fontSize: 10,
-                  color: COLORS.textDim,
-                  letterSpacing: '0.08em',
-                }}
-              >
-                SYSTEM_STATUS: ACTIVE_
-              </span>
-            </div>
           </div>
+        </div>
+
+         {/*Stats dashboard*/}
+         <div
+          style={{
+            background: COLORS.bgCard,
+            border: `1px solid ${COLORS.border}`,
+            borderRadius: 4,
+            height: 160,
+            marginBottom: 20,
+            display: 'grid',
+            gridTemplateColumns: 'repeat(4, 1fr)',
+            alignItems: 'center',
+            textAlign: 'center'
+          }}
+        >
+          {USER_STATS.map((stat, i) => (
+            <div key={i} style={{ borderRight: i !== USER_STATS.length - 1 ? `1px solid ${COLORS.border}` : 'none' }}>
+              <div style={{ fontSize: 12, textTransform: 'uppercase', color: COLORS.textDim, letterSpacing: '1px', marginBottom: 8 }}>
+                {stat.label}
+              </div>
+              <div style={{ fontSize: 20, fontWeight: 'bold', color: COLORS.textMuted, marginBottom: 4 }}>
+                {stat.value}
+              </div>
+              <div style={{ fontSize: 11, color: COLORS.textMuted, fontStyle: 'italic' }}>
+                {stat.sub}
+              </div>
+            </div>
+          ))}
         </div>
 
         {/* Quote + Education row */}
@@ -225,7 +286,7 @@ export default function AboutPage() {
             display: 'grid',
             gridTemplateColumns: '1fr 1.2fr',
             gap: 12,
-            marginBottom: 40,
+            marginBottom: 50,
           }}
         >
           {/* Quote panel */}
@@ -234,7 +295,7 @@ export default function AboutPage() {
               border: `1px solid ${COLORS.border}`,
               borderRadius: 4,
               padding: '28px 32px',
-              background: COLORS.bgDark,
+              background: COLORS.black,
               display: 'flex',
               flexDirection: 'column',
               justifyContent: 'center',
@@ -255,25 +316,25 @@ export default function AboutPage() {
               style={{
                 fontSize: 22,
                 fontStyle: 'italic',
-                color: COLORS.textMuted,
+                color: COLORS.white,
                 marginBottom: 20,
                 lineHeight: 1.4,
               }}
             >
-              &ldquo;A QUOTE&rdquo;
+              &ldquo;Do. Or do not. There is no try.&rdquo;
             </div>
             <div style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
               <div
-                style={{ width: 40, height: 1, background: COLORS.border }}
+                style={{ width: 40, height: 1, background: COLORS.white }}
               />
               <span
                 style={{
                   fontSize: 10,
-                  color: COLORS.textDim,
+                  color: COLORS.white,
                   letterSpacing: '0.08em',
                 }}
               >
-                ARTIST STATEMENT 2024
+                YODA — THE EMPIRE STRIKES BACK
               </span>
             </div>
           </div>
@@ -284,7 +345,7 @@ export default function AboutPage() {
               border: `1px solid ${COLORS.border}`,
               borderRadius: 4,
               padding: 20,
-              background: COLORS.bg,
+              background: COLORS.bgCard,
             }}
           >
             <div
@@ -299,13 +360,13 @@ export default function AboutPage() {
                   fontSize: 14,
                   fontWeight: 600,
                   letterSpacing: '0.08em',
-                  color: COLORS.white,
+                  color: COLORS.textDim,
                 }}
               >
                 EDUCATION
               </h2>
               <span className="tag" style={{ fontSize: 9 }}>
-                ARCHIVE.LOG
+                ACADEMIC.LOG
               </span>
             </div>
 
@@ -327,10 +388,20 @@ export default function AboutPage() {
                       fontSize: 14,
                       fontWeight: 600,
                       letterSpacing: '0.06em',
-                      color: COLORS.white,
+                      color: COLORS.textDim,
                     }}
                   >
                     {item.title}
+                  </div>
+                  <div
+                    style={{
+                      fontSize: 11,
+                      color: COLORS.textDim,
+                      letterSpacing: '0.04em',
+                      marginTop: 4,
+                    }}
+                  >
+                    {item.subtitle}
                   </div>
                 </div>
                 <span style={{ color: COLORS.textMuted, fontSize: 18 }}>
@@ -340,17 +411,6 @@ export default function AboutPage() {
             ))}
           </div>
         </div>
-
-        {/* Extra dark section */}
-        <div
-          style={{
-            background: COLORS.bgDark,
-            border: `1px solid ${COLORS.border}`,
-            borderRadius: 4,
-            height: 160,
-            marginBottom: 40,
-          }}
-        />
       </div>
       <Footer />
     </div>
