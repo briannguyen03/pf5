@@ -26,8 +26,8 @@ export default function ContactPage() {
   };
 
   return (
-    <div style={{ background: COLORS.bgDark, minHeight: '100vh' }}>
-      <div style={{ padding: '0 40px' }}>
+    <div style={{ background: COLORS.bgDark, minHeight: '100vh', display: 'flex', flexDirection: 'column'}}>
+      <div style={{ padding: '0 40px', flex: '1' }}>
         <h1
           className="pixel-font"
           style={{
@@ -96,7 +96,12 @@ export default function ContactPage() {
                   lineHeight: 1.8,
                 }}
               >
-                Feel free to send me a message on Linkedin, or if its important/urgent reach me through email:{' '}
+                Feel free to send me a message on <a 
+                    href='https://www.linkedin.com/in/brian-nguyen-19920027a/' 
+                    target='_blank' rel="noopener noreferrer" 
+                    style={{
+                    color: COLORS.red,
+                  }}>Linkedin</a>, or if its important/urgent reach me through email:{' '}
               </p>
               <span 
                 style={{ 
