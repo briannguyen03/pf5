@@ -4,7 +4,7 @@ import Footer from './Footer';
 const FUN_STUFF = [
   {
     num: '01. Outdoors',
-    quote: 'When I\'m not coding, you\'ll find me biking Victoria\'s trails or hitting the basketball court.',
+    quote: 'When I need to destress, I usually reach for my hiking shoes or go on a bike ride around the city.',
   },
   {
     num: '02. Films',
@@ -12,11 +12,11 @@ const FUN_STUFF = [
   },
   {
     num: '03. Aviation',
-    quote: 'I realy like anything that flies, especially ones with wings.',
+    quote: 'I realy like anything that flies, especially ones with wings. Currently working on building a scalled turbojet engine in my garage',
   },
   {
     num: '04. Hardware',
-    quote: 'The hardware side of tech gets me excited. I enjoy seeing, and building cool hardware projects',
+    quote: 'The hardware side of tech gets me excited. I enjoy seeing, and building cool hardware projects. Currently I am working on building a 5 axis robot arm from 3d printed parts',
   },
 ];
 
@@ -75,8 +75,8 @@ export default function AboutPage() {
               padding: 20,
               background: COLORS.white,
               display: 'flex',
-              flexDirection: 'row', // Align the left column and right column side-by-side
-              gap: 20, // Clean separation between columns
+              flexDirection: 'row',
+              gap: 20,
               overflow: 'hidden',
             }}
           >
@@ -140,10 +140,9 @@ export default function AboutPage() {
                     marginBottom: 12,
                   }}
                 >
-                  I'm a software engineering student in my third year at the University of Victoria.
-                  My core programming languages include Python, C, JavaScript, and Java. I enjoy building everything from web applications, machine learning projects, and hardware.
-                  When I'm not at my desk, you'll find me out on my bike exploring Victoria's trails or hitting the basketball court. So, if you're looking for a plus-one for your ball team or someone to bike with, hit me up!
-                  I think I've built some pretty cool things - check them out on my projects page!
+                  I’m a third-year software engineering student at the University of Victoria, working primarily with Python, C, JavaScript, and Java. 
+                  I love building a wide range of projects, spanning everything from full-stack web applications and machine learning to hands-on hardware. 
+                  When I'm away from my desk, I’m usually out exploring Victoria’s trails on my bike or hitting the basketball court. If you ever need a plus-one for a game or a cycling buddy, definitely hit me up! In the meantime, I’ve built some pretty cool things, so feel free to check them out on my projects page.
                 </p>
               </div>
 

@@ -76,17 +76,8 @@ export default function ContactPage() {
                   color: COLORS.black,
                 }}
               >
-                SEND ME A MESSAGE
+                How to Contact
               </h2>
-              <span
-                style={{
-                  fontSize: 11,
-                  color: '#999',
-                  letterSpacing: '0.06em',
-                }}
-              >
-                ID: 00-FC-82
-              </span>
             </div>
             <hr
               style={{
@@ -96,68 +87,32 @@ export default function ContactPage() {
               }}
             />
 
-            <div style={{ marginBottom: 14 }}>
-              <label
+            <div style={{ marginBottom: 32 }}>
+              <p
                 style={{
-                  display: 'block',
-                  fontSize: 10,
-                  color: '#888',
-                  letterSpacing: '0.08em',
-                  marginBottom: 6,
+                  display: 'inline',
+                  fontSize: 15,
+                  color: COLORS.textMuted,
+                  lineHeight: 1.8,
                 }}
               >
-                _NAME
-              </label>
-              <input
-                className="input-field"
-                placeholder="ENTER NAME..."
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-              />
-            </div>
-            <div style={{ marginBottom: 14 }}>
-              <label
-                style={{
-                  display: 'block',
-                  fontSize: 10,
-                  color: '#888',
-                  letterSpacing: '0.08em',
-                  marginBottom: 6,
+                Feel free to send me a message on Linkedin, or if its important/urgent reach me through email:{' '}
+              </p>
+              <span 
+                style={{ 
+                  direction: 'rtl', 
+                  unicodeBidi: 'bidi-override', 
+                  color: COLORS.textMuted,
+                  fontSize: 15,
+                  fontWeight: 500
                 }}
               >
-                _EMAIL
-              </label>
-              <input
-                className="input-field"
-                placeholder="USER@NETWORK.COM"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-              />
-            </div>
-            <div style={{ marginBottom: 20 }}>
-              <label
-                style={{
-                  display: 'block',
-                  fontSize: 10,
-                  color: '#888',
-                  letterSpacing: '0.08em',
-                  marginBottom: 6,
-                }}
-              >
-                _MESSAGE
-              </label>
-              <textarea
-                className="input-field"
-                placeholder="WRITE YOUR MESSAGE..."
-                rows={6}
-                value={message}
-                onChange={(e) => setMessage(e.target.value)}
-                style={{ resize: 'vertical' }}
-              />
+                moc.liamg@3041nairb.neyugn
+              </span>
             </div>
 
             <button className="send-btn" onClick={handleSend}>
-              {sent ? 'SENT ✓' : 'SEND_DATA →'}
+              {sent ? 'SENT ✓' : 'Random Button?'}
             </button>
           </div>
 
@@ -168,7 +123,7 @@ export default function ContactPage() {
               style={{
                 border: `1px solid ${COLORS.border}`,
                 borderRadius: 4,
-                padding: 16,
+                padding: '20px 16px',
                 background: COLORS.bgCard,
               }}
             >
@@ -177,49 +132,49 @@ export default function ContactPage() {
                   display: 'flex',
                   alignItems: 'center',
                   gap: 8,
-                  marginBottom: 12,
+                  marginBottom: 16,
                 }}
               >
-                <span style={{ color: COLORS.textMuted }}>◎</span>
+                <span style={{ color: COLORS.textMuted, fontSize: 10 }}>◎</span>
                 <span
                   style={{
-                    fontSize: 11,
+                    fontSize: 10,
                     color: COLORS.textMuted,
-                    letterSpacing: '0.08em',
+                    letterSpacing: '0.1em',
+                    fontWeight: 500,
                   }}
                 >
-                  WHERE I AM
+                  CURRENT LOCATION
                 </span>
               </div>
+
+              {/* HIGHLIGHTED LOCATION */}
               <div
                 style={{
-                  background: '#d8d8d8',
-                  borderRadius: 3,
-                  height: 160,
-                  marginBottom: 14,
-                  display: 'flex',
-                  alignItems: 'center',
-                  justifyContent: 'center',
+                  fontSize: 18,
+                  fontWeight: 600,
+                  color: COLORS.textMuted,
+                  letterSpacing: '0.02em',
+                  marginBottom: 4,
                 }}
               >
-                <span style={{ fontSize: 11, color: '#999' }}>[ MAP ]</span>
+                Vancouver, BC
               </div>
+
+              {/* METADATA */}
               <div
                 style={{
                   fontSize: 11,
                   color: COLORS.textMuted,
-                  lineHeight: 1.7,
+                  lineHeight: 1.5,
                   letterSpacing: '0.04em',
                 }}
               >
-                VICTORIA, BC
-                <br />
                 CANADA
-                <br />
-                PACIFIC TIME ZONE
+                <span style={{ margin: '0 8px', color: COLORS.border }}>|</span>
+                PACIFIC TIME (PT)
               </div>
             </div>
-
             {/* Socials */}
             <div
               style={{

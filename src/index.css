@@ -155,3 +155,23 @@ body {
 .social-grid-item:hover {
   background: rgba(255, 255, 255, 0.05);
 }
+
+.home-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+}
+
+.cards-row {
+  grid-template-columns: 1fr 1fr;
+}
+
+@media (min-width: 769px) {
+  .home-grid {
+    grid-template-columns: 1fr 0.47fr;
+  }
+
+  .cards-row {
+    grid-template-columns: 1fr;
+  }
+}
