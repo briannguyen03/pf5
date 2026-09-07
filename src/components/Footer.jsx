@@ -9,20 +9,22 @@ export default function Footer() {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'space-between',
+        flexWrap: 'wrap',          // ← lets links wrap to next line
+        gap: 12,                   // ← spacing when wrapped
         background: COLORS.footerBg,
       }}
     >
       <span
         className="pixel-font"
         style={{
-          fontSize: 45,
+          fontSize: 'clamp(24px, 6vw, 45px)',   // ← shrinks on mobile
           color: COLORS.black,
           letterSpacing: '0.001em',
         }}
       >
         B.NGUYEN
       </span>
-      <div style={{ display: 'flex', gap: 24 }}>
+      <div style={{ display: 'flex', gap: 24, flexWrap: 'wrap' }}>
         <a
           href="https://github.com/briannguyen03"
           target="_blank"

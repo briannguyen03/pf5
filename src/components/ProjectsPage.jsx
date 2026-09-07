@@ -272,16 +272,16 @@ export default function ProjectsPage() {
             marginBottom: 40,
           }}
         >
-          {/* GitHub link card — repurposed from Fractal Lab */}
+          {/* GitHub link card */}
           <a
             href="https://github.com/briannguyen03"
             target="_blank"
             rel="noopener noreferrer"
             style={{
-              border: '1px solid #6b5a2a',
+              border: '1px solid black',
               borderRadius: 4,
               padding: '16px 18px',
-              background: '#1a1508',
+              background: '#ff8c45',
               textDecoration: 'none',
               display: 'block',
             }}
@@ -296,11 +296,11 @@ export default function ProjectsPage() {
             >
               <span
                 className="tag"
-                style={{ borderColor: '#6b5a2a', color: '#c4a84a' }}
+                style={{ borderColor: '#6b5a2a', color: 'black', background: 'white' }}
               >
-                MODULE: ARCHIVE
+                Code Source
               </span>
-              <span style={{ fontSize: 18, color: '#c4a84a' }}>⊞</span>
+              <span style={{ fontSize: 18, color: 'black' }}>⊞</span>
             </div>
             <h3
               style={{
@@ -308,7 +308,7 @@ export default function ProjectsPage() {
                 fontWeight: 600,
                 letterSpacing: '0.06em',
                 marginBottom: 8,
-                color: '#e8d08a',
+                color: 'black',
               }}
             >
               MORE ON GITHUB
@@ -316,14 +316,13 @@ export default function ProjectsPage() {
             <p
               style={{
                 fontSize: 11,
-                color: '#8a7a4a',
+                color: 'grey',
                 lineHeight: 1.7,
                 letterSpacing: '0.04em',
                 marginBottom: 20,
               }}
             >
-              ALL PROJECTS ARE OPEN SOURCE. EXPLORE THE FULL REPOSITORY
-              ARCHIVE INCLUDING THE HAND POSE MODEL AND LIM SCRAPER PIPELINE.
+              See more of my projects on Github
             </p>
             <hr
               style={{ border: 'none', borderTop: '1px solid #6b5a2a', margin: '12px 0' }}
@@ -332,21 +331,12 @@ export default function ProjectsPage() {
               <span
                 style={{
                   fontSize: 10,
-                  color: '#6b5a2a',
-                  letterSpacing: '0.06em',
-                }}
-              >
-                VERSION: 4.0
-              </span>
-              <span
-                style={{
-                  fontSize: 10,
-                  color: '#8a7a4a',
+                  color: 'black',
                   letterSpacing: '0.06em',
                   cursor: 'pointer',
                 }}
               >
-                BROWSE_ALL →→
+                Explore More ↗
               </span>
             </div>
           </a>
@@ -362,13 +352,13 @@ export default function ProjectsPage() {
           >
             <div
               style={{
-                fontSize: 11,
+                fontSize: 17,
                 color: COLORS.textMuted,
                 letterSpacing: '0.08em',
-                marginBottom: 16,
+                marginBottom: 20,
               }}
             >
-              STATS
+              Stats
             </div>
             <div style={{ display: 'flex', gap: 0, marginBottom: 16 }}>
               <div
@@ -395,7 +385,7 @@ export default function ProjectsPage() {
                     letterSpacing: '0.06em',
                   }}
                 >
-                  SHIPPED_PROJECTS
+                  SHIPPED PROJECTS
                 </div>
               </div>
               <div style={{ flex: 1, paddingLeft: 20 }}>
@@ -420,25 +410,6 @@ export default function ProjectsPage() {
                 </div>
               </div>
             </div>
-            <hr
-              style={{
-                border: 'none',
-                borderTop: `1px solid ${COLORS.border}`,
-                margin: '0 0 12px',
-              }}
-            />
-            <p
-              style={{
-                fontSize: 10,
-                color: COLORS.textMuted,
-                lineHeight: 1.7,
-                letterSpacing: '0.04em',
-              }}
-            >
-              EVERY PROJECT IS BUILT WITH CLEAN ARCHITECTURE, SYSTEMATIC
-              TESTING, AND A FOCUS ON REAL-WORLD UTILITY OVER THEORETICAL
-              PERFECTION.
-            </p>
           </div>
         </div>
       </div>
