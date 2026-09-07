@@ -3,20 +3,20 @@ import Footer from './Footer';
 
 const FUN_STUFF = [
   {
-    num: '01. Outdoors',
-    quote: 'When I need to destress, I usually reach for my hiking shoes or go on a bike ride around the city.',
+    num: '01. C++ HTTP Server',
+    quote: 'Building a basic HTTP server from the ground up to learn about different networking protocols and C++',
   },
   {
-    num: '02. Films',
-    quote: 'I enjoy watching a variety of films, and I am a big fan of anything Quentin Tarantino. Follow me on Letterboxd!',
+    num: '02. Animatronic Eye',
+    quote: 'A 3D printed single eye driven by 3 servos, an arduino, and a raspberry pi 5 running a opencv face tracking model.',
   },
   {
-    num: '03. Aviation',
-    quote: 'I realy like anything that flies, especially ones with wings. Currently working on building a scalled turbojet engine in my garage',
+    num: '03. Analog Synthesizer',
+    quote: 'I am building my own analog synthesizer on breadboards from scratch, following Moritz Klein\'s DIY VCO series.',
   },
   {
-    num: '04. Hardware',
-    quote: 'The hardware side of tech gets me excited. I enjoy seeing, and building cool hardware projects. Currently I am working on building a 5 axis robot arm from 3d printed parts',
+    num: '04. FPV Drone',
+    quote: 'Using a 3D printed frame based on the Aether 4 model, I am building my first FPV drone for hobby use!',
   },
 ];
 
@@ -208,7 +208,7 @@ export default function AboutPage() {
                   color: COLORS.textDim,
                 }}
               >
-                OUTSIDE THE TERMINAL
+                WHAT I AM WORKING ON
               </h2>
               <span style={{ fontSize: 16, color: COLORS.textMuted }}>
                 ⁘⁘⁘

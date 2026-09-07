@@ -149,7 +149,7 @@ export default function ContactPage() {
                     fontWeight: 500,
                   }}
                 >
-                  CURRENT LOCATION
+                  CURRENTLY AT
                 </span>
               </div>
 
@@ -163,22 +163,10 @@ export default function ContactPage() {
                   marginBottom: 4,
                 }}
               >
-                Vancouver, BC
+                Victoria, BC
               </div>
 
               {/* METADATA */}
-              <div
-                style={{
-                  fontSize: 11,
-                  color: COLORS.textMuted,
-                  lineHeight: 1.5,
-                  letterSpacing: '0.04em',
-                }}
-              >
-                CANADA
-                <span style={{ margin: '0 8px', color: COLORS.border }}>|</span>
-                PACIFIC TIME (PT)
-              </div>
             </div>
             {/* Socials */}
             <div
