@@ -3,7 +3,7 @@ import Footer from './Footer';
 
 export default function ProjectsPage() {
   return (
-    <div style={{ background: COLORS.bgDark, minHeight: '100vh' }}>
+    <div style={{ minHeight: '100vh' }}>
       <div style={{ padding: '0 40px' }}>
         <h1
           className="pixel-font"

@@ -26,7 +26,7 @@ export default function ContactPage() {
   };
 
   return (
-    <div style={{ background: COLORS.bgDark, minHeight: '100vh', display: 'flex', flexDirection: 'column'}}>
+    <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
       <div style={{ padding: '0 40px', flex: '1' }}>
         <h1
           className="pixel-font"

@@ -4,7 +4,7 @@ import { TiltCard } from './TiltCard';
 
 export default function HomePage({ setPage }) {
   return (
-    <div style={{ background: COLORS.bgDark, minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
+    <div style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column' }}>
       <div style={{ padding: 'clamp(12px, 3vw, 40px) clamp(12px, 3vw, 40px) 0', flex: 1 }}>
         
       <div className="home-grid" style={{ marginBottom: 12 }}>

@@ -1,11 +1,10 @@
 import { useState, useEffect } from 'react';
-import { COLORS } from './constants/colors';
 import Navbar from './components/Navbar';
 import HomePage from './components/HomePage';
 import AboutPage from './components/AboutPage';
 import ProjectsPage from './components/ProjectsPage';
 import ContactPage from './components/ContactPage';
-import EtchingBackground from './components/EtchingBackground';
+import RacingLineBackground from './components/RacingLineBackground';
 
 const PAGES = ['Home', 'About', 'Projects', 'Contact'];
 
@@ -21,15 +20,24 @@ export default function App() {
   }, [page]);
 
   return (
-    <div style={{ minHeight: '100vh', background: COLORS.bgDark, position: 'relative' }}>
-      {page !== 'Home' && <Navbar page={page} setPage={setPage} />}
+    <div style={{ minHeight: '100vh', position: 'relative' }}>
+      {/*
+        Layer order (bottom → top):
+        1. body background (#252525, set in index.css) — the page background
+        2. RacingLineBackground (fixed canvas, z-index 1) — the racing line,
+           lives above the flat background but below ALL page content
+        3. page content (z-index 2)
+      */}
+      <RacingLineBackground />
 
-      {page === 'Home' && <HomePage setPage={setPage} />}
-      {page === 'Projects' && <ProjectsPage />}
-      {page === 'About' && <AboutPage />}
-      {page === 'Contact' && <ContactPage />}
+      <div style={{ position: 'relative', zIndex: 2 }}>
+        {page !== 'Home' && <Navbar page={page} setPage={setPage} />}
 
-      <EtchingBackground />
+        {page === 'Home' && <HomePage setPage={setPage} />}
+        {page === 'Projects' && <ProjectsPage />}
+        {page === 'About' && <AboutPage />}
+        {page === 'Contact' && <ContactPage />}
+      </div>
     </div>
   );
 }

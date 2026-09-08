@@ -33,7 +33,7 @@ const USER_STATS = [
 
 export default function AboutPage() {
   return (
-    <div style={{ background: COLORS.bgDark, minHeight: '100vh' }}>
+    <div style={{ minHeight: '100vh' }}>
       <div style={{ padding: '0 40px' }}>
         <h1
           className="pixel-font"
