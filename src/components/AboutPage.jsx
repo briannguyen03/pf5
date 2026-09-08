@@ -94,7 +94,7 @@ export default function AboutPage() {
               }}
             >
               <img
-                src="assets/rasta_man.png"
+                src="assets/portfolio_pic.webp"
                 alt="Brian Nguyen"
                 style={{
                   width: '100%',
