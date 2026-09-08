@@ -4,7 +4,7 @@ import HomePage from './components/HomePage';
 import AboutPage from './components/AboutPage';
 import ProjectsPage from './components/ProjectsPage';
 import ContactPage from './components/ContactPage';
-import RacingLineBackground from './components/RacingLineBackground';
+import PcbBackground from './components/PcbBackground';
 
 const PAGES = ['Home', 'About', 'Projects', 'Contact'];
 
@@ -24,11 +24,11 @@ export default function App() {
       {/*
         Layer order (bottom → top):
         1. body background (#252525, set in index.css) — the page background
-        2. RacingLineBackground (fixed canvas, z-index 1) — the racing line,
+        2. PcbBackground (fixed canvas, z-index 1) — the gold circuit traces,
            lives above the flat background but below ALL page content
         3. page content (z-index 2)
       */}
-      <RacingLineBackground />
+      <PcbBackground />
 
       <div style={{ position: 'relative', zIndex: 2 }}>
         {page !== 'Home' && <Navbar page={page} setPage={setPage} />}
