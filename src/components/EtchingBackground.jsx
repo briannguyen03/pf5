@@ -39,8 +39,8 @@ export default function EtchingBackground() {
 
     // ---- palette: text colour of the site, drawn faint ----
     const RGB = '232,232,232';
-    const BASE_ALPHA = 0.34; // alpha of the trunk (mask + tip fade do the rest)
-    const TRUNK_W = 1.5;
+    const BASE_ALPHA = 0.40; // alpha of the trunk (mask + tip fade do the rest)
+    const TRUNK_W = 1.6;
 
     const MAX_SEGS = 2600;
     const MAX_DEPTH = 46;
@@ -58,15 +58,14 @@ export default function EtchingBackground() {
       { a: Math.PI * 0.58, s: 0.38 }, // 104° — short top curl
     ];
 
-    let segs = [];
     let raf = 0;
     let drawn = 0;
     let disposed = false;
 
     const segColor = (alpha) => `rgba(${RGB},${alpha.toFixed(4)})`;
 
-    function grow(x, y, ang, len, L0, depth, rng, w, h) {
-      if (segs.length >= MAX_SEGS || depth > MAX_DEPTH || len < MIN_LEN) return;
+    function grow(acc, x, y, ang, len, L0, depth, rng, w, h) {
+      if (acc.length >= MAX_SEGS || depth > MAX_DEPTH || len < MIN_LEN) return;
 
       // Gentle steering keeps the plume inside a natural cone (~95°..185°),
       // pulling wanderers back toward the diagonal body.
@@ -95,12 +94,12 @@ export default function EtchingBackground() {
       const cx = x + Math.cos(ang) * len * 0.5;
       const cy = y + Math.sin(ang) * len * 0.5;
 
-      segs.push({ x, y, cx, cy, x1, y1, width, alpha });
+      acc.push({ x, y, cx, cy, x1, y1, width, alpha });
 
       if (endLeft || endBottom || endOut) return;
 
       const roll = rng();
-      const spawn = (a2, l2) => grow(x1, y1, a2, l2, L0, depth + 1, rng, w, h);
+      const spawn = (a2, l2) => grow(acc, x1, y1, a2, l2, L0, depth + 1, rng, w, h);
 
       if (depth === 0) {
         // split the trunk eagerly — fan from the origin immediately
@@ -132,16 +131,16 @@ export default function EtchingBackground() {
 
     function generate(w, h) {
       const rng = mulberry32(seed ^ 0x9e3779b9);
-      const out = [];
+      const acc = [];
       const minDim = Math.min(w, h);
       // Trunk length scaled to viewport but capped — reach matters, not girth.
       const L0 = Math.max(90, Math.min(300, minDim * 0.30));
       const ax = w - 6;
       const ay = 8;
       for (const root of ROOTS) {
-        grow(ax, ay, root.a, L0 * root.s, L0, 0, rng, w, h, out);
+        grow(acc, ax, ay, root.a, L0 * root.s, L0, 0, rng, w, h);
       }
-      return out;
+      return acc;
     }
 
     const drawSeg = (s) => {
@@ -171,6 +170,7 @@ export default function EtchingBackground() {
       if (drawn < segs.length) raf = requestAnimationFrame(frame);
     };
 
+    let segs = [];
     let resizeTimer = 0;
 
     const render = () => {
